@@ -11,6 +11,7 @@ class DockingStation
 
   def release_bike
     raise "No bike available" if empty?
+    raise "Do not release broken bike" if @bikes[0].broken?
     @bikes.pop
   end
 

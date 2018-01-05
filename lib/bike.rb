@@ -8,6 +8,7 @@ class Bike
   end
 
   def report_broken
-  raise "Bike is broken" if broken?
+    raise "Bike is broken" if broken?
+    true
   end
 end
