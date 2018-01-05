@@ -20,5 +20,10 @@ describe DockingStation do
       subject.capacity.times{subject.dock_bike(Bike.new)}
       expect{subject.dock_bike(Bike.new)}.to raise_error("Too many bikes")
     end
+
+    it 'report bike is broken?' do
+      bike1 = Bike.new
+      expect{subject.dock_bike(bike1.report_broken)}.to raise_error("Bike is broken")
+    end
   end
 end
